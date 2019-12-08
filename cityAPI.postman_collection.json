@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "cityAPI",
+		"_postman_id": "2069423c-e1bf-d2dd-7db7-55994bee9c8f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add city london",
+			"request": {
+				"url": "https://localhost:44365/api/city",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"london\",\n\t\"country\": {\"name\":\"great britain\"},\n\t\"state\":\"london\",\n\t\"touristrating\":5,\n\t\"dateestablished\":\"1900-01-01T06:30:00\",\n\t\"population\":5000000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add city boston us",
+			"request": {
+				"url": "https://localhost:44365/api/city",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"boston\",\n\t\"country\": {\"name\":\"united states\"},\n\t\"state\":\"massachusetts\",\n\t\"touristrating\":4,\n\t\"dateestablished\":\"1701-01-01T03:30:00\",\n\t\"population\":9900000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add city boston uk",
+			"request": {
+				"url": "https://localhost:44365/api/city",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"boston\",\n\t\"country\": {\"name\":\"great britain\"},\n\t\"state\":\"Lincolnshire\",\n\t\"touristrating\":2,\n\t\"dateestablished\":\"1434-08-22T09:30:00\",\n\t\"population\":34000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get cities by name",
+			"request": {
+				"url": "https://localhost:44365/api/city/london",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update city",
+			"request": {
+				"url": "https://localhost:44365/api/city/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"name\":\"london\",\n\t\"country\": {\"name\":\"great britain\"},\n\t\"state\":\"london\",\n\t\"touristrating\":1,\n\t\"dateestablished\":\"1800-01-01T06:30:00\",\n\t\"population\":5000001\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete city",
+			"request": {
+				"url": "https://localhost:44365/api/city/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
