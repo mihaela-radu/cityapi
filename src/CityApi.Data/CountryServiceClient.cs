@@ -7,7 +7,7 @@ using CityApi.Core;
 using CityApi.Core.Models;
 using Newtonsoft.Json;
 
-namespace CityApi.Infrastructure.External
+namespace CityApi.Data
 {
     public class CountryServiceClient : ICountryServiceClient
     {
